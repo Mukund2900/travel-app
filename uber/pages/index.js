@@ -15,7 +15,18 @@ export default function Home() {
     <Wrapper>
       {/* Basic */}
       <Map />
-      <ActionItmes>Dash</ActionItmes>
+      <ActionItmes>
+        {/* header */}
+        <Header>
+          <UberLogo src =  'https://i.ibb.co/cyvcpfF/uberx.png'/>
+        </Header>
+
+        {/* actionbuttons */}
+        <ActionButtons>a</ActionButtons>
+        {/* inputButton */}
+        <InputButton>i</InputButton>
+
+      </ActionItmes>
     </Wrapper>
   )
 }
@@ -30,6 +41,27 @@ const Wrapper = tw.div`
 
 
 const ActionItmes = tw.div`
+flex-1
+
+`
+
+
+const Header = tw.div`
+flex-1
+
+`
+
+const ActionButtons = tw.div`
+flex-1
+
+`
+
+
+const InputButton = tw.div`
+flex-1
+
+`
+const UberLogo = tw.img`
 flex-1
 
 `
