@@ -2,7 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import tw from 'tailwind-styled-components'
-import Map from './components/Map'
+import Map from './components/Map';
+import Link from 'next/link';    
+
 export default function Home() {
 
   // const map = new mapboxgl.Map({
@@ -28,19 +30,21 @@ export default function Home() {
 
         {/* actionbuttons */}
         <ActionButtons>
+          <Link href = '/search'>
           <ActionButton>
+
             <ActionButtonImage src= 'https://i.ibb.co/cyvcpfF/uberx.png'/>Ride</ActionButton>
+          </Link>
+          <ActionButton>
+          <ActionButtonImage  src = 'https://i.ibb.co/n776JLm/bike.png'/>Wheels</ActionButton>
 
           <ActionButton>
-          <ActionButtonImage/>Wheels</ActionButton>
-
-          <ActionButton>
-          <ActionButtonImage/>Reserve</ActionButton>
+          <ActionButtonImage  src = 'https://i.ibb.co/5RjchBg/uberschedule.png'/>Reserve</ActionButton>
 
           
         </ActionButtons>
         {/* inputButton */}
-        {/* <InputButton>i</InputButton> */}
+        <InputButton>Where to?</InputButton>
 
       </ActionItmes>
     </Wrapper>
@@ -69,10 +73,7 @@ flex justify-between items-center
 
 
 
-// const InputButton = tw.div`
-// flex-1
 
-// `
 const UberLogo = tw.img`
 h-28
 
@@ -100,8 +101,11 @@ flex
 `
 
 const ActionButton = tw.div`
-flex bg-gray-200 flex-1 m-1 h-32 items-center flex-col justify-center rounded-lg
+flex bg-gray-200 flex-1 m-1 h-32 items-center flex-col justify-center rounded-lg transform hover:scale-105 transition text-xl
 `
 const ActionButtonImage = tw.img`
 h-3/5
+`
+const InputButton = tw.div`
+h-20 bg-gray-200 text-2xl p-4 flex items-center mt-8 rounded-lg
 `
